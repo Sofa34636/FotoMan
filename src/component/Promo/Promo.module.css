@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Polonium";
+  src: url("PoloniumRegular.woff2") format("woff2") url("PoloniumRegular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.top {
+  background-image: url(../image/изображение1.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+}
+.top__inner {
+  min-height: 756px;
+}
+.top__title {
+  font-family: "Polonium";
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 115.2px;
+  letter-spacing: 0.3em;
+  text-align: center;
+  padding: 180px 0;
+}

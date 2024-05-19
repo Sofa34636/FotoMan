@@ -1,0 +1,25 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  .info_text{
+    display: flex;
+    justify-content: space-between;
+  }
+  .info_title{
+    font-family: Polonium;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0.3em;
+    text-align: left;
+    
+  }
+  .footer__social {
+    display: flex;
+    justify-content: right;
+    padding: 30px 0;
+    gap: 200px;
+  }
+ 
