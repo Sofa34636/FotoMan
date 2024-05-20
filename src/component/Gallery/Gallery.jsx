@@ -59,23 +59,50 @@ function Gallery() {
         <div className={f.dream}>
         <img src={q1} alt="#" className={f.footer__social_img} />
         <img src={q2} alt="#" className={f.footer__social_img} />
-        <img src={q3} alt="#" className={f.footer__social_img} />
-        <img src={q4} alt="#" className={f.footer__social_img} />
-        <img src={q5} alt="#" className={f.footer__social_img} />
+        <img src={w2} alt="#" className={f.footer__social_img} />
+        <img src={w3} alt="#" className={f.footer__social_img} />
+        <img src={e2} alt="#" className={f.footer__social_img} />
+        <img src={q7} alt="#" className={f.footer__social_img} />
+        <img src={q8} alt="#" className={f.footer__social_img} />
+        <img src={e3} alt="#" className={f.footer__social_img} />
+        <img src={w13} alt="#" className={f.footer__social_img} />
+        <img src={w14} alt="#" className={f.footer__social_img} />
+        <img src={q12} alt="#" className={f.footer__social_img} />
+        <img src={w21} alt="#" className={f.footer__social_img} />
+        <img src={e5} alt="#" className={f.footer__social_img} />
+        <img src={q13} alt="#" className={f.footer__social_img} />
         </div>
         <div className={f.dream}>
         <img src={w1} alt="#" className={f.footer__social_img} />
-        <img src={w2} alt="#" className={f.footer__social_img} />
-        <img src={w3} alt="#" className={f.footer__social_img} />
-        <img src={w4} alt="#" className={f.footer__social_img} />
-        <img src={w5} alt="#" className={f.footer__social_img} />
+        <img src={e7} alt="#" className={f.footer__social_img} /> 
+        <img src={q3} alt="#" className={f.footer__social_img} />
+        <img src={q4} alt="#" className={f.footer__social_img} />
+        <img src={w6} alt="#" className={f.footer__social_img} />
+        <img src={w9} alt="#" className={f.footer__social_img} />
+        <img src={w10} alt="#" className={f.footer__social_img} />
+        <img src={w12} alt="#" className={f.footer__social_img} />
+        <img src={w15} alt="#" className={f.footer__social_img} />
+        <img src={w16} alt="#" className={f.footer__social_img} />
+        <img src={q11} alt="#" className={f.footer__social_img} />
+        <img src={w17} alt="#" className={f.footer__social_img} />
+        <img src={w18} alt="#" className={f.footer__social_img} />
+        <img src={w23} alt="#" className={f.footer__social_img} />
         </div>
         <div className={f.dream}>
         <img src={e1} alt="#" className={f.footer__social_img} />
-        <img src={e2} alt="#" className={f.footer__social_img} />
-        <img src={e3} alt="#" className={f.footer__social_img} />
+        <img src={q5} alt="#" className={f.footer__social_img} />
+        <img src={w4} alt="#" className={f.footer__social_img} />
+        <img src={w7} alt="#" className={f.footer__social_img} />
+        <img src={w8} alt="#" className={f.footer__social_img} />
+        <img src={w5} alt="#" className={f.footer__social_img} />
+        <img src={q6} alt="#" className={f.footer__social_img} />
+        <img src={q9} alt="#" className={f.footer__social_img} />
+        <img src={q10} alt="#" className={f.footer__social_img} />
         <img src={e4} alt="#" className={f.footer__social_img} />
-        <img src={e5} alt="#" className={f.footer__social_img} />
+        <img src={w19} alt="#" className={f.footer__social_img} />
+        <img src={w20} alt="#" className={f.footer__social_img} />
+        <img src={e6} alt="#" className={f.footer__social_img} />
+        <img src={w22} alt="#" className={f.footer__social_img} />
         </div>
       </div>
       <div className={f.btn}>

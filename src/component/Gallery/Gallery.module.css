@@ -25,6 +25,7 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
 .dream{
     display: flex;
     flex-direction: column;
@@ -40,7 +41,8 @@
     margin: 40px 0 70px 0;
     background: #222;
     padding: 15px 40px;
-    border-radius: 5px;   
+    border-radius: 5px; 
+   
 }
 .btn a{
     color: #fff;
