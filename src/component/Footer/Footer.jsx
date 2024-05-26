@@ -11,7 +11,7 @@ function Footer() {
         <div className={b.container}>
           <div className={b.footer__rov}>
             
-            <h1 className={b.footer__title}> контакты</h1>
+          <a name='kont'></a><h1 className={b.footer__title}> контакты</h1>
           </div>
           <div className={b.footer__inner}>
             <p className={b.footer__text}>

@@ -11,7 +11,7 @@ function Info() {
       <div className={d.info_container}>
       <div className={d.info_text}>
         
-        <h1 className={d.info_title}>ОБО МНЕ</h1>
+       <a name='me'></a> <h1  className={d.info_title}>ОБО МНЕ</h1>
       </div>
       
         <img src={men} alt="#" className={d.info_social_img} />

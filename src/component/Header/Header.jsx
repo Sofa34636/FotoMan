@@ -24,13 +24,13 @@ function Header() {
             </button>
             <ul className={menuOpen ? `${c.menuOpen}` : ''}>
               <li>
-                <a href="#">обо мне</a>
+                <a href="#me">обо мне</a>
               </li>
               <li>
-                <a href="#">портфолио</a>
+                <a href="#por">портфолио</a>
               </li>
               <li>
-                <a href="#">контакты</a>
+                <a href="#kont">контакты</a>
               </li>
             </ul>
           </nav>

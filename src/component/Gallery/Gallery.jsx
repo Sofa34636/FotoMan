@@ -112,7 +112,7 @@ import e7 from "./FotoGallery/photo_7.jpg";
       <>
         <div className={f.heading}>
           <h3>
-            Фото <span>Галлерея</span>
+          <a name='por'></a>Фото <span>Галлерея</span>
           </h3>
         </div>
 
