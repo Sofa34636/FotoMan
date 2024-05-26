@@ -4,11 +4,13 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 30px;
+  position: relative;
 }
 .top_noise{
   background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7)), url(../image/Шум3.svg);
   opacity: 0.5;
   z-index: 2;
+  clip-path: inset(0 0 140px 0);
 }
 .top {
   background-image: url(../image/изображение1.jpg);
@@ -18,6 +20,7 @@
   background-size: cover;
   z-index: 1;
    clip-path: inset(0 0 140px 0);
+   position: relative;
 }
 
 .top_container{
@@ -33,18 +36,24 @@
   
   z-index: 100;
 }
+.top__inner2{
+  display: flex;
+  justify-content: center;
+}
 .top__title {
   font-size: 96px;
   letter-spacing: 0.3em;
   text-align: center;
-  padding: 180px 0;
+  
   text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
 
   font-family: "Play", sans-serif;
   font-weight: 500;
-  font-style: normal;
+  font-style: normal; 
+position: absolute;
+  top:45%;
 
-  
+
 }
 
 @media (max-width: 1028px){

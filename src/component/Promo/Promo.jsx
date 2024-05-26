@@ -11,17 +11,19 @@ const Promo = () => {
         <div className={a.container}>
           
           <div className={a.top__inner}>
-            <h1 className={a.top__title}>В ОБЪЕКТИВЕ</h1>
+            
           </div>
         </div>
         </div>
        
       </section>
       </div>
+      <div className={a.top__inner2}>
+      <h1 className={a.top__title}>В ОБЪЕКТИВЕ</h1>
+      </div>
     </main>
 
-    //<div className={a.presentation}>
-    //</div>
+
   );
 };
 export default Promo;
