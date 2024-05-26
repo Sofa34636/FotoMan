@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import f from "./Gallery.module.css";
+
 
 import q1 from "./FotoGallery/20170829_002001-01.jpeg";
 import q2 from "./FotoGallery/20181224_151937-01.jpeg";
@@ -47,68 +48,135 @@ import e6 from "./FotoGallery/photo_6.jpg";
 import e7 from "./FotoGallery/photo_7.jpg";
 
 
-function Gallery() {
+  let isFullGalaryShow = false;
+
+  const onShow = () => {
+    let content = document.getElementById("box__container");
+
+    if (isFullGalaryShow == false) {
+      content.style.maxHeight = "none";
+      isFullGalaryShow = true;
+    } else {
+      content.style.maxHeight = "1000px";
+      isFullGalaryShow = false;
+    }
+    
+    document.getElementById("button__text").textContent = isFullGalaryShow ? "Свернуть" : "Развернуть"
+  };
+
+
+  const Gallery = () => {
+    const popupRef = useRef(null);
+    const closeRef = useRef(null);
+  
+    useEffect(() => {
+      const images = document.querySelectorAll(`.${f.dream} img`);
+      const popup = popupRef.current;
+      const close = closeRef.current;
+  
+      const showPopup = (event) => {
+        if (popup) {
+          popup.style.display = 'block';
+          popup.querySelector('img').src = event.target.getAttribute('src');
+        }
+      };
+  
+      const hidePopup = () => {
+        if (popup) {
+          popup.style.display = 'none';
+        }
+      };
+  
+      images.forEach((img) => {
+        img.addEventListener('click', showPopup);
+      });
+  
+      if (close) {
+        close.addEventListener('click', hidePopup);
+      }
+  
+      // Clean up event listeners on component unmount
+      return () => {
+        images.forEach((img) => {
+          img.removeEventListener('click', showPopup);
+        });
+  
+        if (close) {
+          close.removeEventListener('click', hidePopup);
+        }
+      };
+    }, []);
+
   return (
     <div className={f.container}>
-      <div className={f.heading}>
-        <h3>
-          Photo <span>Gallery</span>
-        </h3>
-      </div>
-      <div className={f.box}>
-        <div className={f.dream}>
-        <img src={q1} alt="#" className={f.footer__social_img} />
-        <img src={q2} alt="#" className={f.footer__social_img} />
-        <img src={w2} alt="#" className={f.footer__social_img} />
-        <img src={w3} alt="#" className={f.footer__social_img} />
-        <img src={e2} alt="#" className={f.footer__social_img} />
-        <img src={q7} alt="#" className={f.footer__social_img} />
-        <img src={q8} alt="#" className={f.footer__social_img} />
-        <img src={e3} alt="#" className={f.footer__social_img} />
-        <img src={w13} alt="#" className={f.footer__social_img} />
-        <img src={w14} alt="#" className={f.footer__social_img} />
-        <img src={q12} alt="#" className={f.footer__social_img} />
-        <img src={w21} alt="#" className={f.footer__social_img} />
-        <img src={e5} alt="#" className={f.footer__social_img} />
-        <img src={q13} alt="#" className={f.footer__social_img} />
+      <>
+        <div className={f.heading}>
+          <h3>
+            Фото <span>Галлерея</span>
+          </h3>
         </div>
-        <div className={f.dream}>
-        <img src={w1} alt="#" className={f.footer__social_img} />
-        <img src={e7} alt="#" className={f.footer__social_img} /> 
-        <img src={q3} alt="#" className={f.footer__social_img} />
-        <img src={q4} alt="#" className={f.footer__social_img} />
-        <img src={w6} alt="#" className={f.footer__social_img} />
-        <img src={w9} alt="#" className={f.footer__social_img} />
-        <img src={w10} alt="#" className={f.footer__social_img} />
-        <img src={w12} alt="#" className={f.footer__social_img} />
-        <img src={w15} alt="#" className={f.footer__social_img} />
-        <img src={w16} alt="#" className={f.footer__social_img} />
-        <img src={q11} alt="#" className={f.footer__social_img} />
-        <img src={w17} alt="#" className={f.footer__social_img} />
-        <img src={w18} alt="#" className={f.footer__social_img} />
-        <img src={w23} alt="#" className={f.footer__social_img} />
+
+        <div className={f.box_container} id="box__container">
+          <div className={f.box}>
+            <div className={f.dream}>
+              <img src={q1} alt="#" className={f.footer__social_img} />
+              <img src={q2} alt="#" className={f.footer__social_img} />
+              <img src={w2} alt="#" className={f.footer__social_img} />
+              <img src={w3} alt="#" className={f.footer__social_img} />
+              <img src={e2} alt="#" className={f.footer__social_img} />
+              <img src={q7} alt="#" className={f.footer__social_img} />
+              <img src={q8} alt="#" className={f.footer__social_img} />
+              <img src={e3} alt="#" className={f.footer__social_img} />
+              <img src={w13} alt="#" className={f.footer__social_img} />
+              <img src={w14} alt="#" className={f.footer__social_img} />
+              <img src={q12} alt="#" className={f.footer__social_img} />
+              <img src={w21} alt="#" className={f.footer__social_img} />
+              <img src={e5} alt="#" className={f.footer__social_img} />
+              <img src={q13} alt="#" className={f.footer__social_img} />
+            </div>
+            <div className={f.dream}>
+              <img src={w1} alt="#" className={f.footer__social_img} />
+              <img src={q3} alt="#" className={f.footer__social_img} />
+              <img src={e7} alt="#" className={f.footer__social_img} />
+              <img src={q4} alt="#" className={f.footer__social_img} />
+              <img src={w6} alt="#" className={f.footer__social_img} />
+              <img src={w9} alt="#" className={f.footer__social_img} />
+              <img src={w10} alt="#" className={f.footer__social_img} />
+              <img src={w12} alt="#" className={f.footer__social_img} />
+              <img src={w15} alt="#" className={f.footer__social_img} />
+              <img src={w16} alt="#" className={f.footer__social_img} />
+              <img src={q11} alt="#" className={f.footer__social_img} />
+              <img src={w17} alt="#" className={f.footer__social_img} />
+              <img src={w18} alt="#" className={f.footer__social_img} />
+              <img src={w23} alt="#" className={f.footer__social_img} />
+            </div>
+            <div className={f.dream}>
+              <img src={e1} alt="#" className={f.footer__social_img} />
+              <img src={q5} alt="#" className={f.footer__social_img} />
+              <img src={w4} alt="#" className={f.footer__social_img} />
+              <img src={w7} alt="#" className={f.footer__social_img} />
+              <img src={w8} alt="#" className={f.footer__social_img} />
+              <img src={w5} alt="#" className={f.footer__social_img} />
+              <img src={q6} alt="#" className={f.footer__social_img} />
+              <img src={q9} alt="#" className={f.footer__social_img} />
+              <img src={q10} alt="#" className={f.footer__social_img} />
+              <img src={e4} alt="#" className={f.footer__social_img} />
+              <img src={w19} alt="#" className={f.footer__social_img} />
+              <img src={w20} alt="#" className={f.footer__social_img} />
+              <img src={e6} alt="#" className={f.footer__social_img} />
+              <img src={w22} alt="#" className={f.footer__social_img} />
+            </div>
+          </div>
         </div>
-        <div className={f.dream}>
-        <img src={e1} alt="#" className={f.footer__social_img} />
-        <img src={q5} alt="#" className={f.footer__social_img} />
-        <img src={w4} alt="#" className={f.footer__social_img} />
-        <img src={w7} alt="#" className={f.footer__social_img} />
-        <img src={w8} alt="#" className={f.footer__social_img} />
-        <img src={w5} alt="#" className={f.footer__social_img} />
-        <img src={q6} alt="#" className={f.footer__social_img} />
-        <img src={q9} alt="#" className={f.footer__social_img} />
-        <img src={q10} alt="#" className={f.footer__social_img} />
-        <img src={e4} alt="#" className={f.footer__social_img} />
-        <img src={w19} alt="#" className={f.footer__social_img} />
-        <img src={w20} alt="#" className={f.footer__social_img} />
-        <img src={e6} alt="#" className={f.footer__social_img} />
-        <img src={w22} alt="#" className={f.footer__social_img} />
+        <div className={f.btn}>
+          <button onClick={onShow} id="button__text">Развернуть</button>
         </div>
-      </div>
-      <div className={f.btn}>
-        <a href="#">More</a>
+      </>
+      <div className={f.pop_up} ref={popupRef}>
+        <span ref={closeRef}>&times;</span>
+        <img src='' alt="#" />
       </div>
     </div>
   );
-}
+};
 export default Gallery;

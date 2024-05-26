@@ -3,23 +3,110 @@
     margin: 0 auto;
     padding: 0 30px;
   }
-  .info_text{
-    display: flex;
-    justify-content: space-between;
+  .info_container{
+    position: relative;
   }
+  .info_text{
+  position: absolute;
+  top: 5%; 
+  right: 0px;
+  white-space: nowrap; 
+
+  }
+  .info__inner {
+    min-height: 100px;
+    min-width: 500px;
+    
+    margin-bottom: 20px;
+      min-width: 683px;
+      width: 10px;
+      font-family: "Montserrat Alternates";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29.26px;
+      letter-spacing: 0.2em;
+
+
+      position: absolute;
+    top: 33%; 
+    right: 100px; 
+  }
+  .info__textt {
+      
+    }
   .info_title{
-    font-family: Polonium;
     font-size: 40px;
-    font-weight: 400;
-    line-height: 48px;
     letter-spacing: 0.3em;
     text-align: left;
+
+    font-family: "Play", sans-serif;
+  font-weight: 500;
+  font-style: normal;
     
   }
-  .footer__social {
-    display: flex;
-    justify-content: right;
-    padding: 30px 0;
-    gap: 200px;
-  }
  
+  @media (max-width: 1311px){
+    .info__inner {
+      top: 33%; 
+      right: 25px;
+    }
+  }
+  @media (max-width: 1189px){
+    .info__inner {
+      font-size: 20px;
+      min-width: 503px;
+      top: 28%; 
+      right: 100px;
+    }
+  }
+  @media (max-width: 1046px){
+   .info__p{
+    display: none;
+   }
+   .info__inner {
+    min-width: 453px;
+    right: 70px;
+  }
+  }
+  @media (max-width: 904px){
+    .info__pp {
+      display: none;
+    }
+    .info__inner {
+      min-width: 303px;
+      right: 60px;
+      top: 38%; 
+    }
+    .info_title{
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 634px){
+    .info__pp {
+      display: contents;
+    }
+    .info__p {
+      display: contents;
+    }
+    .info__inner {
+      min-height: 0px;
+      min-width: 100%;
+      margin-bottom: 0px;
+        font-size: 16px;
+        position: relative;
+      top: 0; 
+      right: 0; 
+      display: block;
+      margin: 0 auto;
+    }
+    .info_text{
+      display: flex;
+      position: relative;
+      top: 0; 
+      justify-content: right;
+      
+      }
+      .info_title{
+        font-size: 25px;
+      }
+  }

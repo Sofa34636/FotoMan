@@ -3,35 +3,23 @@ import d from "./Info.module.css";
 import Insta from "../../image/message/Instagram.svg";
 import Telegram from "../../image/message/Telegram.svg";
 import Whatsapp from "../../image/message/Whatsapp.svg";
+import men from "../../image/Марк_заливка_лист.png";
 
 function Info() {
   return (
     <div className={d.container}>
+      <div className={d.info_container}>
       <div className={d.info_text}>
-        <div></div>
+        
         <h1 className={d.info_title}>ОБО МНЕ</h1>
       </div>
-      <div>
-        <img src="#" alt="#" className={d.info_social_img} />
-      </div>
-      <div className={d.footer__contacts}>
-        <ul className={d.footer__social}>
-          <li className={d.footer__social_item}>
-            <a href="#" className={d.footer__social_link}>
-              <img src={Insta} alt="#" className={d.footer__social_img} />
-            </a>
-          </li>
-          <li className={d.footer__social_item}>
-            <a href="#" className={d.footer__social_link}>
-              <img src={Telegram} alt="#" className={d.footer__social_img} />
-            </a>
-          </li>
-          <li className={d.footer__social_item}>
-            <a href="#" className={d.footer__social_link}>
-              <img src={Whatsapp} alt="#" className={d.footer__social_img} />
-            </a>
-          </li>
-        </ul>
+      
+        <img src={men} alt="#" className={d.info_social_img} />
+        <div className={d.info__inner}>
+            <p className={d.info__textt}>
+            Меня зовут Марк и я - фотограф.</p><div className={d.info__pp}> <p>Я всегда стремлюсь к тому, чтобы каждый кадр был уникальным и выразительным.</p></div> <div className={d.info__p}><p > Чтобы каждая фотосессия была запоминающейся и незабываемой.</p></div>
+            
+          </div>
       </div>
     </div>
   );

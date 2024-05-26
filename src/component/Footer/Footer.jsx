@@ -10,7 +10,7 @@ function Footer() {
       <section className={b.footer}>
         <div className={b.container}>
           <div className={b.footer__rov}>
-            <div></div>
+            
             <h1 className={b.footer__title}> контакты</h1>
           </div>
           <div className={b.footer__inner}>
@@ -53,7 +53,12 @@ function Footer() {
                   />
                 </a>
               </li>
-            </ul>
+              </ul>
+              <div>
+              <a className={b.footer__num}>
+                +7 909 657 837
+              </a>
+              </div>     
           </div>
         </div>
       </section>

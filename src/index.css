@@ -3,6 +3,12 @@
   padding: 0px;
   margin: 0px;
   border: none;
+  /* outline: solid 1px; */
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 *,
@@ -108,12 +114,11 @@ label {
 legend {
   display: block;
 }
+.sdv{
+margin-top: -120px;
+}
+.wrapper{
 
-body {
-  /* color: rgb(5, 5, 5);
-     background: url('../src/component/image/Шум3.svg');
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-color: rgb(255, 255, 255);
-    backdrop-filter: blur(2px);*/
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7)), url(../src/component/image/Шум3.svg);
+
 }

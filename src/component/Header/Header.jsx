@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import c from "./Header.module.css";
 import logo from "../image/лого.svg";
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
   return (
     <header className={c.header}>
       <div className={c.container}>
@@ -11,7 +16,13 @@ function Header() {
             <img src={logo} alt="#"></img>
           </div>
           <nav className={c.header__nav}>
-            <ul>
+            <button className={c.menu__btn} onClick={toggleMenu}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul className={menuOpen ? `${c.menuOpen}` : ''}>
               <li>
                 <a href="#">обо мне</a>
               </li>
